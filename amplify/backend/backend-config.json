@@ -1,15 +1,23 @@
 {
-	"auth": {
-		"bcrCognito": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": []
-		}
-	},
-	"storage": {
-		"bcrS3": {
-			"service": "S3",
-			"providerPlugin": "awscloudformation"
-		}
-	}
+    "auth": {
+        "bcrCognito": {
+            "service": "Cognito",
+            "providerPlugin": "awscloudformation",
+            "dependsOn": []
+        }
+    },
+    "storage": {
+        "bcrS3": {
+            "service": "S3",
+            "providerPlugin": "awscloudformation"
+        }
+    },
+    "predictions": {
+        "bcrTextract": {
+            "providerPlugin": "awscloudformation",
+            "service": "RekognitionAndTextract",
+            "dependsOn": [],
+            "identifyType": "identifyText"
+        }
+    }
 }

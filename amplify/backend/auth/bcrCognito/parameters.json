@@ -1,6 +1,6 @@
 {
     "identityPoolName": "bcr_identity_pool",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "openIdLambdaRoleName": "bcrCogfa1d83c7_openid_lambda_role",
     "resourceNameTruncated": "bcrCogfa1d83c7",
     "userPoolName": "bcr_user_pool",
