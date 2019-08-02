@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "business-card-reader-dev-20190802210748-authRole",
+            "UnauthRoleArn": "arn:aws:iam::050124817506:role/business-card-reader-dev-20190802210748-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::050124817506:role/business-card-reader-dev-20190802210748-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "business-card-reader-dev-20190802210748-deployment",
+            "UnauthRoleName": "business-card-reader-dev-20190802210748-unauthRole",
+            "StackName": "business-card-reader-dev-20190802210748",
+            "StackId": "arn:aws:cloudformation:us-east-1:050124817506:stack/business-card-reader-dev-20190802210748/89e506d0-b550-11e9-bb13-12dffdf25cac"
+        }
+    }
+}

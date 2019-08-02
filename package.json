@@ -9,10 +9,18 @@
   },
   "author": "Issam Zinati",
   "license": "ISC",
+  "dependencies": {
+    "@aws-amplify/core": "latest",
+    "@aws-amplify/predictions": "latest"
+  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.2.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.17.0"
+    "prettier": "^1.17.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "copy-webpack-plugin": "^4.5.2",
+    "webpack-dev-server": "^3.1.5"
   }
 }
