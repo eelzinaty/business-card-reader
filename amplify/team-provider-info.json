@@ -9,6 +9,11 @@
             "UnauthRoleName": "business-card-reader-dev-20190802210748-unauthRole",
             "StackName": "business-card-reader-dev-20190802210748",
             "StackId": "arn:aws:cloudformation:us-east-1:050124817506:stack/business-card-reader-dev-20190802210748/89e506d0-b550-11e9-bb13-12dffdf25cac"
+        },
+        "categories": {
+            "auth": {
+                "bcrCognito": {}
+            }
         }
     }
 }

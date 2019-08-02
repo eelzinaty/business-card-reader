@@ -1,1 +1,15 @@
-{}
+{
+	"auth": {
+		"bcrCognito": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"storage": {
+		"bcrS3": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}
