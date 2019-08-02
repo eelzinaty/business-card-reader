@@ -4,6 +4,8 @@
   "description": "Business Card Reader",
   "main": "index.js",
   "scripts": {
+    "start": "webpack && webpack-dev-server --mode development",
+    "build": "webpack",
     "lint": "eslint --fix . && echo 'Lint complete.'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
