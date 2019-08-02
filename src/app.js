@@ -1,5 +1,7 @@
 import Amplify from '@aws-amplify/core';
 import Predictions, { AmazonAIPredictionsProvider } from '@aws-amplify/predictions';
+import Storage from '@aws-amplify/storage'
+import Auth from '@aws-amplify/auth'
 import awsconfig from './aws-exports';
 
 Amplify.configure(awsconfig);

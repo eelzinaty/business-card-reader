@@ -11,7 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "@aws-amplify/core": "latest",
-    "@aws-amplify/predictions": "latest"
+    "@aws-amplify/predictions": "latest",
+    "@aws-amplify/auth": "latest",
+    "@aws-amplify/storage": "latest"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
