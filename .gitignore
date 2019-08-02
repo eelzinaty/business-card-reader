@@ -14,3 +14,5 @@ dist/
 node_modules/
 aws-exports.js
 awsconfiguration.json
+
+sample_business_cards/

@@ -35,7 +35,10 @@ UploadImageForm.addEventListener('submit', (evt) => {
                 }
             }
         }).then((response) => {
-            MutationResult.innerHTML = `MUTATION RESULTS:` + JSON.stringify(response);
+            console.log(response)
+            MutationResult.innerHTML = `Text Extracted Successfully`;
+            MutationResult.innerHTML += `<br/>Result line by line:<br/>`;
+            MutationResult.innerHTML += `${response.text.lines.join('<br/>')}`;
         });
     })
     .catch(error => {
