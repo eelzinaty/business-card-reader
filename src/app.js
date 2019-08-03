@@ -7,25 +7,20 @@ import awsconfig from './aws-exports';
 Amplify.configure(awsconfig);
 Amplify.addPluggable(new AmazonAIPredictionsProvider());
 
-async function createNewTodo() {
-    console.log("In")
-}
-
-//const MutationButton = document.getElementById('MutationEventButton');
-const MutationResult = document.getElementById('MutationResult');
+const ResultUpdates = document.getElementById('ResultUpdates');
 const UploadImageForm = document.getElementById('UploadImageForm');
 
 UploadImageForm.addEventListener('submit', (evt) => {
     evt.preventDefault();
+    ResultUpdates.innerHTML = `Uploading file, wait ...`;
     let photo = document.getElementById("fileToUpload").files[0];
-    let formData = new FormData();
-
-    formData.append("photo", photo);
+    
     Storage.put('test.jpg', photo,
         {
             level: 'public'
         }
     ).then(data => {
+        ResultUpdates.innerHTML = `File uploaded successfully. Wait till the extracted text result come back.`;
         console.log(data);
         Predictions.identify({
             text: {
@@ -36,12 +31,16 @@ UploadImageForm.addEventListener('submit', (evt) => {
             }
         }).then((response) => {
             console.log(response)
-            MutationResult.innerHTML = `Text Extracted Successfully`;
-            MutationResult.innerHTML += `<br/>Result line by line:<br/>`;
-            MutationResult.innerHTML += `${response.text.lines.join('<br/>')}`;
+            ResultUpdates.innerHTML = `Text Extracted Successfully`;
+            ResultUpdates.innerHTML += `<br/>Result line by line:<br/>`;
+            ResultUpdates.innerHTML += `${response.text.lines.join('<br/>')}`;
+        }).catch(error => {
+            ResultUpdates.innerHTML = `Failed to extract the information!`;
+            console.log(error);
         });
     })
     .catch(error => {
+        ResultUpdates.innerHTML = `Failed to upload the file`;
         console.log(error);
     });
     
